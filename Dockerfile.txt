@@ -1,0 +1,12 @@
+# Utiliser une image de base PHP
+FROM php:7.4-apache
+
+# Copier les fichiers du frontend dans le répertoire de travail
+COPY css /var/www/html/css/
+COPY fonts /var/www/html/fonts/
+COPY img /var/www/html/img/
+COPY js /var/www/html/js/
+COPY index.html /var/www/html/
+
+# Exposer le port 80
+EXPOSE 80
